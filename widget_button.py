@@ -1,8 +1,9 @@
 import streamlit as st
 
-option = st.selectbox(
-    "職業は？",
-    ("学生","会社員","公務員","自営業","その他")
+options = st.multiselect(
+    "What are your favorite fruits?",
+    ["Apple","Orange","Melon","Peach"],
+    ["Apple","Meoln"]
 )
 
-st.write("あなたの職業は：",option)
+st.write("You selscted: ", options)
