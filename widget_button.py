@@ -1,7 +1,7 @@
 import streamlit as st
 
 apple = st.checkbox("apple")
-oraneg = st.checkbox("orange")
+orange = st.checkbox("orange")
 melon = st.checkbox("melon")
 
 fruits = []
