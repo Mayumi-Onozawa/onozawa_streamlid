@@ -1,15 +1,4 @@
 import streamlit as st
 
-apple = st.checkbox("apple")
-orange = st.checkbox("orange")
-melon = st.checkbox("melon")
-
-fruits = []
-if apple:
-    fruits.append("apple")
-if orange:
-    fruits.append("orange")
-if melon:
-    fruits.append("melon")
-
-st.write(f'You selected{fruits}')
+genre = st.radio("好きな食べ物は？", ("ラーメン","カレー","寿司"), horizontal=True)
+st.write(f"{genre}が好きなんですね！")
