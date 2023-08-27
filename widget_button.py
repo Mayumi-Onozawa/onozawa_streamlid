@@ -1,4 +1,4 @@
-import streamlid as st
+import streamlit as st
 if st.button("say hello"):
     st.write("Why hello there")
 else:
