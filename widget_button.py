@@ -1,4 +1,8 @@
 import streamlit as st
 
-genre = st.radio("好きな食べ物は？", ("ラーメン","カレー","寿司"), horizontal=True)
-st.write(f"{genre}が好きなんですね！")
+option = st.selectbox(
+    "職業は？",
+    ("学生","会社員","公務員","自営業","その他")
+)
+
+st.write("あなたの職業は：",option)
