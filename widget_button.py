@@ -1,11 +1,5 @@
 import streamlit as st
 from datetime import date
 
-time_range = st.slider(
-    "When do you start/finish?",
-    value = (date(2020,1,1),date(2021,1,1)),
-    format = "YYYY/MM/DD"
-)
-
-st.write("Start time:", time_range[0])
-st.write("End time:", time_range[1])
+title = st.text_input("好きな映画は？", "Back to the future")
+st.write("入力された映画：", title)
