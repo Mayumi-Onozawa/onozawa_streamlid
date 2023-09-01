@@ -7,4 +7,5 @@ time_range = st.slider(
     format = "YYYY/MM/DD"
 )
 
-st.write("Start time:", time_range)
+st.write("Start time:", time_range[0])
+st.write("End time:", time_range[1])
