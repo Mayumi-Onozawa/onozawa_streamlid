@@ -1,5 +1,5 @@
 import streamlit as st
 
-promt = st.chat_input("ここに入力してください")
-if promt:
-    st.write(f"入力内容: {promt}")
+message = st.chat_message("assistant")
+message.write("Hello human")
+message.write("Hoe are you?")
