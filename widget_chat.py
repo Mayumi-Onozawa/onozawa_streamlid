@@ -10,4 +10,8 @@ for message in st.session_state.messages:
 
 if prompt := st.chat_input("What is up?"):
    st.chat_message("user").markdown(prompt)
-   st.session_state.messages.append({"role":"assistant", "content":response})
+   st.session_state.messages.append({"role":"assistant", "content":prompt})
+
+   response = f"Echo:{prompt}"
+   st.chat_message("assistant").markdown(response)
+   st.session_state.messages.append({"role":"assistant","content":response})
