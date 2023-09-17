@@ -18,7 +18,7 @@ if prompt := st.chat_input("What is up?"):
         full_response = ""
         assistant_response = random.choice(
             [
-                "Hello there! How can I assist you today?","Hi, human! Is there anything I can help you with?","Do you need 
+                "Hello there! How can I assist you today?","Hi, human! Is there anything I can help you with?","Do you need help?"
             ]
         )
 
