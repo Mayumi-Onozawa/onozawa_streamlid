@@ -1,8 +1,14 @@
 import streamlit as st
+st.title("Echo Bot")
 
-with st.chat_message("assistant"):
-    st.write("Hello! How are you?")
-with st.chat_message("user"):
-    st.write("Fine Thank you. And you?")
-with st.chat_message("assistant"):
-    st.write("I'm good. Let's get started.")
+if "messages" not in st.session_state:
+    st.session_state.messages = []
+
+for message in st.session_state.messages:
+    with st.chat_message(message["role"]):
+        st.markdown(message["content"])
+
+if prompt := st.chat_input("What is up?"):
+    with st.chat_message("user"):
+        st.markdown(prompt)
+    st.session_state.messages.append({"role":"user","content":prompt})
